@@ -1,0 +1,42 @@
+Dataloader:
+  CNN:
+    FD001: 19
+    FD002: 19
+    FD003: 19
+    FD004: 19
+  LSTM:
+    FD001: 30
+    FD002: 20
+    FD003: 38
+    FD004: 19
+  window_step: 1
+  bsc: True
+  scaling_method: '-11'
+Training:
+  epochs: 60
+  waiting_epochs: 35
+  interval: 5
+Optuna:
+  out_feature:
+   high: 160
+   low: 48
+   step: 16
+  learning_rate:
+   low: 0.0001 
+   high: 0.01
+  learn_fact:
+   high: 0.8
+   low: 0.5
+  batch_size:
+   high: 1280
+   low: 512
+   step: 64
+  momentum:
+   high: 0.99
+   low: 0.75
+Plotting:
+  FD001: [19,34,89,99]
+  FD002: [14,19,44,89,99]
+  FD003: [2,9,52,74,89]
+  FD004: [14,19,31,56,91,99]
+
